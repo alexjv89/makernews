@@ -1,4 +1,10 @@
-makernewsindia
-==============
+The open source site for maker news india
 
-This is the code repository for maker news website
+
+Build on django-skel
+====================
+
+A modern Django (1.5) project skeleton.
+
+![A fancy Django project skeleton](https://github.com/rdegges/django-skel/raw/master/docs/source/_static/skel.jpg)
+
