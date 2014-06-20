@@ -1,0 +1,53 @@
+{% extends "newsletter/base.html" %} 
+
+{% block title %}Makeystreet| Find maker parts{% endblock %}
+{% block extra_js %}
+    <script>
+        $('document').ready(function(){
+            // $('#loginModal').modal();
+            // alert("hello");
+        });
+    </script>
+{% endblock %}
+{% block templates %}
+{% endblock %}
+
+{% block backbone %}
+{% endblock %}
+
+{% block content_full %}
+    
+    {% if errors %}
+        <div class="row">
+            <div class="text_center col-lg-offset-2 col-sm-8 col-md-8">
+                {% for error in errors %}
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <center> <strong>Error!</strong> {{ error }} </center>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    
+    <div class="row">
+        <div class="col-sm-12 col-xs-12">
+            <div class="jumbotron">
+                <center>
+                    <h1>Maker News India</h1>
+                    <p>Get to know all maker related activity in India</p>
+                </center>
+            </div>
+        </div>
+    </div>
+ 
+
+
+
+{% endblock %}
+
+{% block extra_js_end %}
+    <script>
+
+    </script>
+{% endblock %}

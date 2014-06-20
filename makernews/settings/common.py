@@ -110,10 +110,7 @@ STATICFILES_FINDERS = (
 ########## END STATIC FILE CONFIGURATION
 
 
-########## SECRET CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
-SECRET_KEY = r"0zl+!h_y4^+-ztq&wk2ljs5h$i!mt^u1n(n!vikwk_krd(e-@@"
-########## END SECRET CONFIGURATION
+
 
 
 ########## FIXTURE CONFIGURATION
@@ -202,6 +199,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
+    'makernews.apps.newsletter',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -276,3 +274,8 @@ COMPRESS_JS_FILTERS = [
     'compressor.filters.template.TemplateFilter',
 ]
 ########## END COMPRESSION CONFIGURATION
+
+########## SECRET CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
+SECRET_KEY = r"0zl+!h_y4^+-ztq&wk2ljs5h$i!mt^u1n(n!vikwk_krd(e-@@"
+########## END SECRET CONFIGURATION
