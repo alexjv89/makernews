@@ -94,8 +94,8 @@
 
 
 
-    <div id="page-content">
-        <div class="container">
+    <div id="page-content" style="background: url('{% static 'img/image.jpg' %}') no-repeat center center fixed;">
+        <div class="container" style="background:rgba(255,255,255,1);">
             <div class="row"><div class="col-sm-12 col-md-12"></div></div>
             <div class="row"><div class="col-sm-12 col-md-12"></div></div>
 
@@ -117,26 +117,13 @@
             {% block content_top %} {% endblock %}
             <!--start - used for all pages that needs the full width  -->
             
-            <div class="row" id="">
+            <div class="row" id="" >
                 <div class="col-sm-12 col-md-12">
                     {% block content_full %}
                     {% endblock %}
                 </div>
             </div>
 
-            <!-- start - used for the designer page  -->
-            <div class="row">
-                <div class="col-sm-3 col-md-3">
-                    <!-- discountinued. do not use this block. will be removed soon -->
-                    {% block content_left %}
-                    {% endblock %}
-                </div>
-                <div class="col-sm-9 col-md-9">
-                    <!-- discountinued. do not use this block. will be removed soon -->
-                    {% block content_right %}
-                    {% endblock %}
-                </div>
-            </div>
             
             <!--end - used for the designer page  -->
             {% block content_bottom %} {% endblock %}
