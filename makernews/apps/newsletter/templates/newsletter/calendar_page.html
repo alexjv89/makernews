@@ -1,0 +1,57 @@
+{% extends "newsletter/base.html" %} 
+
+{% block title %}Makeystreet| Find maker parts{% endblock %}
+{% block extra_js %}
+    <script>
+        $('document').ready(function(){
+            // $('#loginModal').modal();
+            // alert("hello");
+        });
+    </script>
+{% endblock %}
+{% block templates %}
+{% endblock %}
+
+{% block backbone %}
+{% endblock %}
+
+{% block content_full %}
+    
+    {% if errors %}
+        <div class="row">
+            <div class="text_center col-lg-offset-2 col-sm-8 col-md-8">
+                {% for error in errors %}
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <center> <strong>Error!</strong> {{ error }} </center>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    
+    <div class="row">
+        <div class="col-sm-12 col-xs-12">
+            <center>
+                <h1>Maker News India - Events Calendar</h1>
+            </center>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-xs-12">
+            <center>
+                <iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=fa0revr32gv7v34o8ivsmjh3mg%40group.calendar.google.com&amp;color=%23875509&amp;ctz=Asia%2FCalcutta" style=" border-width:0 " width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+            </center>
+        </div>
+    </div>
+ 
+
+
+
+{% endblock %}
+
+{% block extra_js_end %}
+    <script>
+
+    </script>
+{% endblock %}
