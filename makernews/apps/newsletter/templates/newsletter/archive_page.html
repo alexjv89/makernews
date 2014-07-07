@@ -4,6 +4,8 @@
 {% block extra_js %}
     <script>
         $('document').ready(function(){
+            mixpanel.track("Archive Page",{event_type:"archive_page_opened"});
+            console.log("Archive Page")
             // $('#loginModal').modal();
             // alert("hello");
         });

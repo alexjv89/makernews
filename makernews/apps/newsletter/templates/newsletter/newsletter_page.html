@@ -4,6 +4,9 @@
 {% block extra_js %}
     <script>
         $('document').ready(function(){
+            // console.log("{{nl.number}}");
+            // console.log("{{nl.link}}");
+            mixpanel.track("Newsletter Page",{event_type:"newsletter_page_opened",newsletter_edition:{{nl.number}} });
             // $('#loginModal').modal();
             // alert("hello");
         });

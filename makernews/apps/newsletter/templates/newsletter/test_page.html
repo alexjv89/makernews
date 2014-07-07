@@ -43,44 +43,30 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
     <!-- JQUERY -->
-    <script src="{% static 'js/jquery-1.10.1.min.js' %}"></script>
+    <!-- // <script src="{% static 'js/jquery-1.10.1.min.js' %}"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
     <script src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
     <script src="{% static 'js/jquery.cookie.js' %}"></script>
 
     <!-- Bootstrap and rest -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
+    <script src="{% static 'js/underscore.js' %}"></script>
+    <script src="{% static 'js/backbone-min.js' %}"></script>
+    <script src="{% static 'js/backbone-tastypie.js' %}"></script>
+    <script src="{% static 'js/handlebars.min.js' %}"></script> 
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/Autolinker.min.js' %}"></script>
+    <script src-"{% static 'js/image-picker.js' %}"></script>
 
     <!-- ProUI related js -->
     <script src="{% static 'proui/js/custom_app.js' %}"></script>
 
 
-    {% include "newsletter/components/csrf_js.html" %}
 
-    {% block templates %} {% endblock %}
-    {% block extra_js %} {% endblock %}
-    {% block extra_css %} {% endblock %}
-    {% block fb_meta %} {% endblock %}
-    
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $(document).on("click",".preventDefault",function(event){
-            event.preventDefault();
-        });
-        $('#nav_create_makey').click(function(event) {
-            {% if not user.is_authenticated %}
-                alert('Please Login to Create a Makey');
-            {% endif %}
-        });
-    });
-    </script>
-
-    <meta name="csrf-token" content="{{csrf_token}}" />
 </head>
 
 <body>
-    {% include "newsletter/components/navbar.html" %}
-    
 
 
 
@@ -90,48 +76,46 @@
 
     <div id="page-content" style="background: url('{% static 'img/image.jpg' %}') no-repeat center center fixed;">
         <div class="container" style="background:rgba(255,255,255,1);">
-            <div class="row"><div class="col-sm-12 col-md-12"></div></div>
-            <div class="row"><div class="col-sm-12 col-md-12"></div></div>
+            
 
-            {% if messages %}
-                <div class="row">
-                    <div class="col-lg-offset-1 col-sm-10 col-md-10">
-                        {% for message in messages %}
-                            <div class="alert alert-{% if message.tags %}{{ message.tags }}{% endif %} alert-warning">
-                                <center>
-                                    <button type="button" class="close" data-dismiss="alert">×</button>
-                                    {% autoescape off %}{{ message }}{% endautoescape %}
-                                </center>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
-          
             <div class="row" id="" >
                 <div class="col-sm-12 col-md-12">
-                    {% block content_full %}
-                    {% endblock %}
+                        {% include 'newsletter/components/mailchimp_form.html' %}
+                        {% include 'newsletter/components/mailchimp_js.html' %}
+                    
                 </div>
             </div>
 
+            
         </div>
     </div>
     
-    <div id="footer">
-        <div class="container-fluid">
-            <p class="credit text-muted"> Suggestions or bugs? Mail me at alex@makeystreet.com </p>
-        </div>
-    </div>
 
-    <!-- dummy divs created to make sure that app.js dont throw errors -->
-    <script>
-        $('.tooltips').tooltip();
-    </script>
-    
-    {% block sample_data%} {% endblock%}
-    {% block extra_js_end %} {% endblock %}
-    {% block backbone %} {% endblock %}
-    {% include "components/customerio.html" %}
 </body>
 </html>
+
+
+
+
+
+
+<!-- 
+<!doctype html>
+<html>
+    {% load static from staticfiles %}
+
+    <head>
+        <title>
+            Maker News India
+        </title>
+
+
+    </head>
+<body>
+    
+    
+    
+   
+    
+</body>
+</html> -->

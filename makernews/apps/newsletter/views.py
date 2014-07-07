@@ -15,6 +15,11 @@ def calendar_page(request):
 	# return HttpResponse('Landing page for maker news india')
 	return render(request, 'newsletter/calendar_page.html', {
 		})
+def test_page(request):
+	print "\n\n\n came here"
+	# return HttpResponse('Landing page for maker news india')
+	return render(request, 'newsletter/test_page.html', {
+		})
 
 def archive_page(request):
 	print "\n\n\n came here"

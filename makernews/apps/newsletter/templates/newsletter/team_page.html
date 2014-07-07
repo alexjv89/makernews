@@ -4,6 +4,7 @@
 {% block extra_js %}
     <script>
         $('document').ready(function(){
+            mixpanel.track("Team Page",{event_type:"team_page_opened"});
             // $('#loginModal').modal();
             // alert("hello");
         });

@@ -9,6 +9,7 @@ urlpatterns = patterns('',
                        url(r'^calendar/$', views.calendar_page, name='calendar_page'),
                        url(r'^archive/$', views.archive_page, name='archive_page'),
                        url(r'^team/$', views.team_page, name='team_page'),
+                       url(r'^test/$', views.test_page, name='test_page'),
                        url(r'^newsletter/(?P<newsletter_no>\d+)/$', views.newsletter_page,
                            name="newsletter"),
                        )
