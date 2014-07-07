@@ -89,7 +89,7 @@
 
 
     <div id="page-content" style="background: url('{% static 'img/image.jpg' %}') no-repeat center center fixed;">
-        <div class="container" style="background:rgba(255,255,255,1);">
+        <div class="container" id="mainContainer" style="background:rgba(255,255,255,1);">
             <div class="row"><div class="col-sm-12 col-md-12"></div></div>
             <div class="row"><div class="col-sm-12 col-md-12"></div></div>
 
@@ -108,14 +108,16 @@
                 </div>
             {% endif %}
           
-            <div class="row" id="" >
-                <div class="col-sm-12 col-md-12">
+            <!-- <div class="row" id="maindiv" > -->
+                <!-- <div class="col-sm-12 col-md-12" > -->
                     {% block content_full %}
                     {% endblock %}
-                </div>
-            </div>
+                <!-- </div> -->
+            <!-- </div> -->
 
         </div>
+        {% block content_without_container %}
+        {% endblock %}
     </div>
     
     <div id="footer">

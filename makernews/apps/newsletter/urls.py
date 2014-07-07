@@ -10,6 +10,7 @@ urlpatterns = patterns('',
                        url(r'^archive/$', views.archive_page, name='archive_page'),
                        url(r'^team/$', views.team_page, name='team_page'),
                        url(r'^test/$', views.test_page, name='test_page'),
+                       url(r'^embed/email_signup$', views.embed_email_signup, name='embed_email_signup'),
                        url(r'^newsletter/(?P<newsletter_no>\d+)/$', views.newsletter_page,
                            name="newsletter"),
                        )

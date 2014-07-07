@@ -7,7 +7,7 @@ def landing_page(request):
 	# return render_to_response('catalog/landing_page.html', args,context_instance=RequestContext(request))
 	# return HttpResponse('Landing page for maker news india')
 	print "\n\n\n on the landing page"
-	return render(request, 'newsletter/landing_page.html', {
+	return render(request, 'newsletter/landing_page2.html', {
 		})
 
 def calendar_page(request):
@@ -15,10 +15,17 @@ def calendar_page(request):
 	# return HttpResponse('Landing page for maker news india')
 	return render(request, 'newsletter/calendar_page.html', {
 		})
+
 def test_page(request):
 	print "\n\n\n came here"
 	# return HttpResponse('Landing page for maker news india')
 	return render(request, 'newsletter/test_page.html', {
+		})
+
+def embed_email_signup(request):
+	# print "\n\n\n came here"
+	# return HttpResponse('Landing page for maker news india')
+	return render(request, 'newsletter/embed_email_signup.html', {
 		})
 
 def archive_page(request):
