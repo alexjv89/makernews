@@ -1,6 +1,10 @@
 {% extends "newsletter/base.html" %} 
 
-{% block title %}Makeystreet| Find maker parts{% endblock %}
+{% block title %} Maker News India - Newsletter {{newsletter_no}} {% endblock %}
+{% block contentmeta%} 
+    <meta name="description" content="Engage with makers around you!">
+    <meta name="author" content="Siddardha G, Alex VJ">
+    {% endblock%}
 {% block extra_js %}
     <script>
         $('document').ready(function(){

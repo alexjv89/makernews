@@ -6,6 +6,7 @@ from django.conf.urls import patterns, include, url
 admin.autodiscover()
 
 
+
 # See: https://docs.djangoproject.com/en/dev/topics/http/urls/
 urlpatterns = patterns('',
     # Admin panel and documentation:
